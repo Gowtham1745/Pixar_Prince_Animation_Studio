@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixar Prince Animation Studio - Home</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'blog:index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About</a></li>
+                <li><a href="{% url 'blog:services' %}">Services</a></li>
+                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Where Dreams Come to Life Through Cutting-Edge VFX, CGI & Animation</h1>
+            <p>Transform your vision into reality with award-winning visual effects, stunning CGI, and captivating animations that captivate audiences worldwide.</p>
+            <div class="hero-buttons">
+                <a href="{% url 'blog:contact' %}" class="btn btn-primary">Start Your Project</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-secondary">View Portfolio</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES PREVIEW ========== -->
+    <section class="section bg-gradient-2" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Comprehensive creative solutions for your brand</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🎥</div>
+                        <h3>Professional VFX</h3>
+                        <p>Industry-leading visual effects including compositing, motion tracking, particle simulations, and digital matte painting.</p>
+                        <a href="{% url 'blog:services' %}" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🎨</div>
+                        <h3>CGI & 3D Animation</h3>
+                        <p>Stunning 3D modeling, environment design, product visualization, and architectural rendering with cutting-edge technology.</p>
+                        <a href="{% url 'blog:services' %}" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🎬</div>
+                        <h3>Video Production</h3>
+                        <p>Complete video production services from concept to delivery, including editing, color grading, and sound design.</p>
+                        <a href="{% url 'blog:services' %}" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATS SECTION ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Social Media Reach</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Transform Your Vision into Reality?</h2>
+                <p style="color: var(--primary-dark); margin-bottom: 30px; font-size: 1.1rem;">Let's create something extraordinary together. Contact us today to discuss your project.</p>
+                <a href="{% url 'blog:contact' %}" class="btn btn-primary">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 Pixar Prince</h3>
+                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:index' %}">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:services' %}">Services</a></li>
+                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
+                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
+                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
+                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
+                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
+                        <li>🌐 www.pixarprince.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Pixar Prince Animation Studio</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'blog:index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About</a></li>
+                <li><a href="{% url 'blog:services' %}">Services</a></li>
+                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="services-hero">
+        <div class="hero-content">
+            <h1>Our Services</h1>
+            <p>Comprehensive visual content solutions tailored to your needs</p>
+        </div>
+    </section>
+
+    <!-- ========== SERVICES SHOWCASE ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="section-title">
+                <h2>What We Offer</h2>
+                <p>A complete range of creative services</p>
+            </div>
+
+            <div class="grid grid-2 services-grid">
+                <!-- Service 1: VFX -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">🎥</div>
+                        <h3>Professional Visual Effects</h3>
+                        <p>Transform your content with industry-leading VFX expertise. From compositing to motion tracking, we deliver stunning visual enhancements.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>💫 Compositing & Green Screen</li>
+                            <li>🔍 Motion Tracking</li>
+                            <li>🌊 Particle Simulations</li>
+                            <li>🎨 Digital Matte Painting</li>
+                            <li>✨ Color Grading</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 2: CGI -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">🎨</div>
+                        <h3>CGI & 3D Animation</h3>
+                        <p>Bring your ideas to life with stunning 3D modeling, environment design, and character animation that captivates audiences.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>🏗️ 3D Modeling & Texturing</li>
+                            <li>🌍 Environment Design</li>
+                            <li>🚀 Character Animation</li>
+                            <li>🏢 Architectural Rendering</li>
+                            <li>📦 Product Visualization</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Video Production -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">🎬</div>
+                        <h3>Video Production</h3>
+                        <p>Complete end-to-end video production services from concept development through final delivery, including professional editing and sound design.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>📹 Filming & Cinematography</li>
+                            <li>✂️ Video Editing</li>
+                            <li>🎵 Sound Design & Music</li>
+                            <li>🎙️ Voice Over</li>
+                            <li>📺 Motion Graphics</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Animation -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">🎭</div>
+                        <h3>Animation Services</h3>
+                        <p>Create engaging animated content that tells your brand story with custom animations, explainer videos, and interactive animations.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>🎞️ 2D Animation</li>
+                            <li>🎬 3D Animation</li>
+                            <li>📖 Explainer Videos</li>
+                            <li>🎪 Character Animation</li>
+                            <li>💻 Web Animation</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Sound Design -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">🎵</div>
+                        <h3>Sound Design & Audio</h3>
+                        <p>Professional sound design that elevates your content with immersive audio experiences, from music production to sound effects.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>🎼 Music Production</li>
+                            <li>🔊 Sound Effects</li>
+                            <li>🎙️ Voice Acting & Narration</li>
+                            <li>🎧 Audio Mixing & Mastering</li>
+                            <li>🌐 Foley Recording</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Consulting -->
+                <div class="card service-card">
+                    <div class="card-content">
+                        <div class="card-icon">💼</div>
+                        <h3>Creative Consulting</h3>
+                        <p>Expert guidance on visual storytelling, creative direction, and production strategy tailored to your specific project needs.</p>
+                        
+                        <h4>Sub-Services:</h4>
+                        <ul class="service-list">
+                            <li>📋 Creative Direction</li>
+                            <li>🎯 Project Strategy</li>
+                            <li>💡 Concept Development</li>
+                            <li>🔧 Technical Consultation</li>
+                            <li>📊 Production Planning</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Get Quote</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRICING SECTION ========== -->
+    <section class="section bg-gradient-2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Flexible Pricing Plans</h2>
+                <p>Choose the perfect package for your project</p>
+            </div>
+
+            <div class="grid grid-3 pricing-grid">
+                <!-- Starter -->
+                <div class="card pricing-card">
+                    <div class="card-content">
+                        <h3>Starter</h3>
+                        <div class="price">$2,500</div>
+                        <p class="package-info">Perfect for small projects and startups</p>
+
+                        <ul class="price-list">
+                            <li>✅ One primary service</li>
+                            <li>✅ Up to 2 revisions</li>
+                            <li>✅ 5-day turnaround</li>
+                            <li>✅ Basic consultation</li>
+                            <li>✅ HD delivery</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Select Plan</a>
+                    </div>
+                </div>
+
+                <!-- Professional -->
+                <div class="card pricing-card featured">
+                    <div class="badge">Most Popular</div>
+                    <div class="card-content">
+                        <h3>Professional</h3>
+                        <div class="price">$7,500</div>
+                        <p class="package-info">Ideal for medium-scale productions</p>
+
+                        <ul class="price-list">
+                            <li>✅ Multiple services</li>
+                            <li>✅ Up to 5 revisions</li>
+                            <li>✅ 3-day turnaround</li>
+                            <li>✅ Advanced consultation</li>
+                            <li>✅ 4K delivery</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-primary">Get Started</a>
+                    </div>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="card pricing-card">
+                    <div class="card-content">
+                        <h3>Enterprise</h3>
+                        <div class="price">Custom</div>
+                        <p class="package-info">For large-scale projects</p>
+
+                        <ul class="price-list">
+                            <li>✅ Unlimited services</li>
+                            <li>✅ Unlimited revisions</li>
+                            <li>✅ Custom timeline</li>
+                            <li>✅ Dedicated team</li>
+                            <li>✅ All delivery formats</li>
+                        </ul>
+
+                        <a href="{% url 'blog:contact' %}" class="btn btn-outline">Inquire Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DETAILED SERVICE BOXES ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Our Services?</h2>
+                <p>What sets us apart</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="feature-box">
+                    <div class="feature-icon">🏆</div>
+                    <h3>Award-Winning Quality</h3>
+                    <p>Our work has been recognized by industry leaders and audiences worldwide for exceptional creativity and technical excellence.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Fast Turnaround</h3>
+                    <p>We understand deadlines matter. Our efficient workflows ensure timely delivery without compromising on quality.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">💰</div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Premium quality services at competitive rates. We offer flexible packages to fit any budget and project scope.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Custom Solutions</h3>
+                    <p>Every project is unique. We tailor our services to meet your specific needs and creative vision.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">👥</div>
+                    <h3>Expert Team</h3>
+                    <p>Our team comprises seasoned professionals with decades of combined experience in animation, VFX, and digital media.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🤝</div>
+                    <h3>Client Focused</h3>
+                    <p>Your satisfaction is our priority. We maintain open communication throughout the project lifecycle to ensure perfect results.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Bring Your Vision to Life?</h2>
+                <p style="color: var(--primary-dark); margin-bottom: 30px; font-size: 1.1rem;">Let's discuss your project requirements and find the perfect solution for your needs.</p>
+                <a href="{% url 'blog:contact' %}" class="btn btn-primary">Contact Us Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 Pixar Prince</h3>
+                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:index' %}">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:services' %}">Services</a></li>
+                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
+                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
+                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
+                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
+                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
+                        <li>🌐 www.pixarprince.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

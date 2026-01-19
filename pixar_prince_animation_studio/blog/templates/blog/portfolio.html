@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Pixar Prince Animation Studio</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'blog:index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About</a></li>
+                <li><a href="{% url 'blog:services' %}">Services</a></li>
+                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="portfolio-hero">
+        <div class="hero-content">
+            <h1>Our Portfolio</h1>
+            <p>Showcase of our best work in animation, VFX, and digital media</p>
+        </div>
+    </section>
+
+    <!-- ========== PORTFOLIO GRID ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Projects</h2>
+                <p>Award-winning work across multiple industries</p>
+            </div>
+
+            <div class="grid grid-3 portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Alpha</h3>
+                            <p>3D Animation | Branding</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Beta</h3>
+                            <p>VFX | Commercial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Gamma</h3>
+                            <p>Character Animation | Film</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Delta</h3>
+                            <p>Motion Graphics | Tech</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Epsilon</h3>
+                            <p>Product Visualization | Retail</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                        <div class="portfolio-overlay">
+                            <h3>Project Zeta</h3>
+                            <p>VR Experience | Gaming</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECT DETAILS ========== -->
+    <section class="section bg-gradient-2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Highlights</h2>
+                <p>Detailed case studies</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="detail-box">
+                    <h3>🎬 Commercial Campaign</h3>
+                    <p><strong>Client:</strong> Major Brand</p>
+                    <p><strong>Type:</strong> 60-second commercial with integrated VFX</p>
+                    <p><strong>Result:</strong> 5M+ views, 95% engagement rate</p>
+                    <p>Delivered a stunning commercial combining live-action footage with seamless VFX integration, resulting in massive audience engagement.</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>🎨 3D Animation Project</h3>
+                    <p><strong>Client:</strong> Tech Startup</p>
+                    <p><strong>Type:</strong> Explainer video with 3D characters</p>
+                    <p><strong>Result:</strong> Product launch success, increased sales 40%</p>
+                    <p>Created an engaging 3D animated explainer video that significantly boosted product understanding and customer acquisition.</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>🎥 Film VFX Work</h3>
+                    <p><strong>Client:</strong> Independent Film Studio</p>
+                    <p><strong>Type:</strong> Full-length feature film VFX</p>
+                    <p><strong>Result:</strong> Won Best VFX at Film Festival</p>
+                    <p>Completed comprehensive VFX work for a feature film that earned critical acclaim and festival recognition.</p>
+                </div>
+
+                <div class="detail-box">
+                    <h3>🌐 Web Animation Suite</h3>
+                    <p><strong>Client:</strong> E-commerce Platform</p>
+                    <p><strong>Type:</strong> Interactive web animations</p>
+                    <p><strong>Result:</strong> Increased user engagement 60%</p>
+                    <p>Developed interactive animations that dramatically improved user experience and engagement metrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== STATISTICS ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Projects Delivered</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Satisfied Clients</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Total Views</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROJECT HIGHLIGHTS ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Makes Our Work Stand Out</h2>
+                <p>Our approach to excellence</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="feature-box">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Strategic Storytelling</h3>
+                    <p>Every project tells a compelling story that resonates with your target audience and achieves your business goals.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">✨</div>
+                    <h3>Technical Excellence</h3>
+                    <p>We leverage cutting-edge technology and industry best practices to deliver technically flawless work.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🚀</div>
+                    <h3>Creative Innovation</h3>
+                    <p>Our team constantly pushes creative boundaries to deliver unique and memorable visual experiences.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">💯</div>
+                    <h3>Quality Assurance</h3>
+                    <p>Rigorous testing and quality control ensure every project meets our exacting standards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Ready to Add Your Project to Our Portfolio?</h2>
+                <p style="color: var(--primary-dark); margin-bottom: 30px; font-size: 1.1rem;">Let's create something exceptional together that showcases your brand's potential.</p>
+                <a href="{% url 'blog:contact' %}" class="btn btn-primary">Start Your Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 Pixar Prince</h3>
+                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:index' %}">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:services' %}">Services</a></li>
+                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
+                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
+                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
+                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
+                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
+                        <li>🌐 www.pixarprince.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Pixar Prince Animation Studio - VFX, CGI, Animation & More{% endblock %}</title>
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --secondary-color: #764ba2;
+            --primary-light: #e8eef7;
+            --primary-dark: #5568d3;
+            --accent-color: #667eea;
+            --text-color: #ffffff;
+            --text-light: #e0e0e0;
+            --border-color: #ddd;
+            --shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f4f4f4;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            font-size: 18px;
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+            border: 2px solid white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .page-content {
+            margin-top: 80px;
+        }
+
+        /* Button Styling */
+        .btn, button, input[type="submit"], a.btn {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn:hover, button:hover, input[type="submit"]:hover, a.btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active, button:active, input[type="submit"]:active, a.btn:active {
+            transform: translateY(0);
+        }
+
+        /* Form Styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea,
+        select {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            font-size: 16px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        /* Links */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Cards */
+        .card, .service, .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover, .service:hover, .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(102, 126, 234, 0.25);
+        }
+
+        /* Headings */
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 700;
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        /* Gradient Sections */
+        .gradient-primary {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+        }
+
+        .gradient-primary a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .gradient-primary a:hover {
+            opacity: 0.9;
+        }
+
+        /* Badge/Highlight */
+        .badge {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Icon Circle */
+        .icon-circle {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+
+        footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* RESPONSIVE DESIGN - MOBILE & TABLET */
+        @media (max-width: 768px) {
+            /* Mobile Navigation */
+            nav .container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 15px;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-links a {
+                font-size: 0.9em;
+                padding: 6px 12px;
+            }
+
+            /* Mobile Page Content */
+            .page-content {
+                margin-top: 150px;
+            }
+
+            /* Mobile Headings */
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.2em;
+            }
+
+            /* Mobile Buttons */
+            .btn, button, input[type="submit"], a.btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            /* Mobile Grids */
+            div[style*="grid-template-columns"] {
+                grid-template-columns: 1fr !important;
+            }
+
+            /* Mobile Flex */
+            div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 15px !important;
+            }
+
+            /* Mobile Text */
+            p {
+                font-size: 0.95em;
+                line-height: 1.5;
+            }
+
+            /* Mobile Footer */
+            footer {
+                padding: 15px;
+            }
+
+            footer .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            /* Mobile Forms */
+            input[type="text"],
+            input[type="email"],
+            input[type="tel"],
+            textarea,
+            select {
+                width: 100%;
+                box-sizing: border-box;
+                font-size: 16px;
+            }
+
+            /* Mobile Cards */
+            .card, .service, .portfolio-item {
+                padding: 20px;
+            }
+        }
+
+        /* TABLET VIEW (768px - 1024px) */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            nav .container {
+                padding: 0 15px;
+            }
+
+            .nav-links {
+                gap: 20px;
+            }
+
+            .nav-links a {
+                font-size: 0.95em;
+                padding: 6px 12px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+
+        /* DESKTOP VIEW (1025px+) - Already optimized */
+        @media (min-width: 1025px) {
+            nav .container {
+                padding: 0 20px;
+            }
+
+            .nav-links {
+                gap: 30px;
+            }
+        }
+    </style>
+    {% block extra_head %}{% endblock %}
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="{% url 'index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Animation Studio Logo" style="height: 40px; width: auto;">
+            </a>
+            <div class="nav-links">
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'about' %}">About</a>
+                <a href="{% url 'portfolio' %}">Portfolio</a>
+                <a href="{% url 'services' %}">Services</a>
+                <a href="{% url 'contact' %}">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        <div class="container">
+            <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; padding: 20px;">
+                <div>
+                    <h4>Pixar Prince Animation Studio</h4>
+                    <p>Bringing imagination to life through art, technology, and creativity.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="{% url 'portfolio' %}">Portfolio</a></li>
+                        <li><a href="{% url 'contact' %}">Contact</a></li>
+                        <li><a href="{% url 'services' %}">Services</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <a href="https://www.instagram.com/pixar_prince_" style="color: #667eea; text-decoration: none; margin-right: 10px;">Instagram</a>
+                    <a href="https://wa.me/917539982355" style="color: #25D366; text-decoration: none;">WhatsApp</a>
+                </div>
+            </div>
+            <div style="text-align: center; border-top: 1px solid #444; padding-top: 20px; margin-top: 20px;">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

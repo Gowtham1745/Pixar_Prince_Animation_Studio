@@ -1,0 +1,252 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Pixar Prince Animation Studio</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'blog:index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About</a></li>
+                <li><a href="{% url 'blog:services' %}">Services</a></li>
+                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="about-hero">
+        <div class="hero-content">
+            <h1>About Pixar Prince Animation Studio</h1>
+            <p>Pioneering the future of visual effects, CGI, and animation with innovation, creativity, and excellence.</p>
+        </div>
+    </section>
+
+    <!-- ========== STORY SECTION ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+                <p>From passion to profession</p>
+            </div>
+
+            <div class="story-content">
+                <div class="story-text">
+                    <p>Pixar Prince Animation Studio was founded with a singular vision: to transform creative ideas into visual masterpieces that captivate and inspire audiences worldwide. What started as a small team of passionate animators and visual effects artists has evolved into a full-service creative studio.</p>
+
+                    <p>Since our inception, we've been committed to pushing the boundaries of what's possible in animation, visual effects, and CGI. Our team combines cutting-edge technology with artistic excellence to deliver projects that exceed client expectations.</p>
+
+                    <p>We believe in the power of storytelling through visual media. Every project we undertake is approached with dedication, precision, and an unwavering commitment to quality.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MISSION & VISION ========== -->
+    <section class="section bg-gradient-2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mission & Vision</h2>
+                <p>Driving innovation in creative media</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🎯</div>
+                        <h3>Our Mission</h3>
+                        <p>To deliver exceptional visual content that tells compelling stories, drives engagement, and transforms brands through the power of animation, VFX, and CGI.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🚀</div>
+                        <h3>Our Vision</h3>
+                        <p>To be the world's leading animation and visual effects studio, recognized for innovation, creativity, and the ability to bring any vision to life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CORE VALUES ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Core Values</h2>
+                <p>The principles that guide our work</p>
+            </div>
+
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">💡</div>
+                        <h3>Innovation</h3>
+                        <p>We constantly explore new techniques and technologies to deliver cutting-edge solutions.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🎨</div>
+                        <h3>Creativity</h3>
+                        <p>Artistic excellence and creative thinking drive every project we undertake.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">✅</div>
+                        <h3>Excellence</h3>
+                        <p>We never compromise on quality and always strive for perfection in every frame.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🤝</div>
+                        <h3>Collaboration</h3>
+                        <p>We work closely with clients to understand their vision and bring it to life.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">⏰</div>
+                        <h3>Reliability</h3>
+                        <p>Meeting deadlines with consistent quality is non-negotiable for our team.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon">🌟</div>
+                        <h3>Passion</h3>
+                        <p>We are passionate about visual storytelling and bringing creative visions to reality.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOUNDER SECTION ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Our Founder</h2>
+                <p>The visionary behind Pixar Prince</p>
+            </div>
+
+            <div class="founder-card">
+                <div class="founder-image" style="margin-bottom: 30px; text-align: center;">
+                    <img src="{% static 'blog/images/creator.jpg' %}" alt="Gowtham A - Founder" style="width: 250px; height: 250px; border-radius: 15px; object-fit: cover; box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);">
+                </div>
+                <div class="founder-content">
+                    <h3>Gowtham A</h3>
+                    <p class="founder-title">Founder & Creative Director</p>
+                    <p>With over a decade of experience in animation, visual effects, and digital media, Gowtham founded Pixar Prince with the mission to create world-class visual content. His leadership, creative vision, and technical expertise have established the studio as a trusted partner for brands and creators worldwide.</p>
+
+                    <div class="founder-skills">
+                        <span>Animation</span>
+                        <span>Visual Effects</span>
+                        <span>3D Modeling</span>
+                        <span>Project Management</span>
+                        <span>Creative Direction</span>
+                        <span>Client Relations</span>
+                    </div>
+
+                    <div class="founder-cta">
+                        <a href="{% url 'blog:contact' %}" class="btn btn-primary">Work With Us</a>
+                        <a href="{% url 'blog:portfolio' %}" class="btn btn-secondary">View Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Let's Create Something Amazing Together</h2>
+                <p style="color: var(--primary-dark); margin-bottom: 30px; font-size: 1.1rem;">Whether you have a small project or a large-scale production, we're ready to bring your vision to life.</p>
+                <a href="{% url 'blog:contact' %}" class="btn btn-primary">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 Pixar Prince</h3>
+                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:index' %}">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:services' %}">Services</a></li>
+                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
+                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
+                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
+                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
+                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
+                        <li>🌐 www.pixarprince.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>

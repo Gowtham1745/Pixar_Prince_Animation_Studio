@@ -1,0 +1,244 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pixar Prince Animation Studio</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+</head>
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'blog:index' %}" class="logo">
+                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="{% url 'blog:index' %}">Home</a></li>
+                <li><a href="{% url 'blog:about' %}">About</a></li>
+                <li><a href="{% url 'blog:services' %}">Services</a></li>
+                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
+                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
+            </div>
+
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="contact-hero">
+        <div class="hero-content">
+            <h1>Get In Touch</h1>
+            <p>We'd love to hear about your project. Let's create something amazing together.</p>
+        </div>
+    </section>
+
+    <!-- ========== CONTACT FORM SECTION ========== -->
+    <section class="section bg-gradient-1">
+        <div class="container">
+            <div class="grid grid-2" style="gap: 50px;">
+                <!-- Contact Form -->
+                <div>
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                            <span class="error-message" id="nameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                            <span class="error-message" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Type</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="vfx">Visual Effects</option>
+                                <option value="animation">CGI & Animation</option>
+                                <option value="video">Video Production</option>
+                                <option value="sound">Sound Design</option>
+                                <option value="consulting">Creative Consulting</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="success-message" id="successMessage" style="display: none;">
+                            ✅ Message sent successfully! We'll get back to you soon.
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-box">
+                        <h3>📧 Email</h3>
+                        <p><a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></p>
+                        <p>We respond to all inquiries within 24 hours.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>📞 Phone</h3>
+                        <p><a href="tel:+917539982355">+91 7539982355</a></p>
+                        <p>Available Monday-Friday, 9AM-6PM IST</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>🌐 Website</h3>
+                        <p>www.pixarprince.com</p>
+                        <p>Visit our website for more information</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>🗺️ Location</h3>
+                        <p>Based in India</p>
+                        <p>Available for remote collaborations worldwide</p>
+                    </div>
+
+                    <div class="info-box">
+                        <h3>⏱️ Response Time</h3>
+                        <p>Typically respond within 24 hours</p>
+                        <p>Complex projects discussed via call or meeting</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FAQ SECTION ========== -->
+    <section class="section bg-gradient-2">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about our services</p>
+            </div>
+
+            <div class="grid grid-2">
+                <div class="faq-item">
+                    <h3>What's your typical project timeline?</h3>
+                    <p>Timelines vary based on project scope and complexity. Simple projects can be completed in 5-7 days, while complex productions may take 4-8 weeks. We provide custom timelines after discussing your specific requirements.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you offer package deals?</h3>
+                    <p>Yes! We offer flexible pricing packages (Starter, Professional, Enterprise) that can be customized to fit your budget and project needs. Custom packages available upon request.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How many revisions are included?</h3>
+                    <p>Revision limits depend on your selected package. Starter includes 2, Professional includes 5, and Enterprise plans offer unlimited revisions. All revisions are made until you're completely satisfied.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What file formats do you deliver?</h3>
+                    <p>We deliver in all standard formats: MP4, MOV, ProRes, DCP for video; PSD, AI, PNG for graphics; WAV, MP3, AAC for audio. Custom formats available upon request.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Do you work with international clients?</h3>
+                    <p>Absolutely! We work with clients worldwide. Time zone differences are managed through clear communication, scheduled meetings, and detailed project documentation.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What's your payment process?</h3>
+                    <p>Typically 50% deposit to start, 50% upon completion. For larger projects, we can arrange milestone-based payments. We accept bank transfers, PayPal, and cryptocurrency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA SECTION ========== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-section">
+                <h2>Let's Create Something Extraordinary</h2>
+                <p style="color: var(--primary-dark); margin-bottom: 30px; font-size: 1.1rem;">Whether you have a fully developed concept or just a spark of an idea, we're here to help bring your vision to life.</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="{% url 'blog:contact' %}" class="btn btn-primary">Start Your Project</a>
+                    <a href="{% url 'blog:portfolio' %}" class="btn btn-secondary">View Our Work</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🎬 Pixar Prince</h3>
+                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
+                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:index' %}">Home</a></li>
+                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
+                        <li><a href="{% url 'blog:services' %}">Services</a></li>
+                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
+                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
+                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
+                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
+                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
+                        <li>🌐 www.pixarprince.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'blog/js/main.js' %}"></script>
+</body>
+</html>
