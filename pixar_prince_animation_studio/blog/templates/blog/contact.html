@@ -1,40 +1,8 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Pixar Prince Animation Studio</title>
-    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
-</head>
-<body>
-    <!-- ========== NAVBAR ========== -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="{% url 'blog:index' %}" class="logo">
-                <img src="{% static 'blog/images/studio_logo.png' %}" alt="Pixar Prince Logo" style="height: 50px; width: auto;">
-            </a>
-            
-            <ul class="nav-menu">
-                <li><a href="{% url 'blog:index' %}">Home</a></li>
-                <li><a href="{% url 'blog:about' %}">About</a></li>
-                <li><a href="{% url 'blog:services' %}">Services</a></li>
-                <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
-                <li><a href="{% url 'blog:contact' %}">Contact</a></li>
-            </ul>
+{% extends 'blog/base.html' %}
 
-            <div class="nav-cta">
-                <a href="{% url 'blog:contact' %}" class="btn btn-secondary">Get a Quote</a>
-                <a href="{% url 'blog:portfolio' %}" class="btn btn-primary">Watch Showreel</a>
-            </div>
+{% block title %}Contact - Pixar Prince Animation Studio{% endblock %}
 
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
+{% block content %}
 
     <!-- ========== HERO SECTION ========== -->
     <section class="hero" id="contact-hero">
@@ -190,55 +158,4 @@
         </div>
     </section>
 
-    <!-- ========== FOOTER ========== -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>🎬 Pixar Prince</h3>
-                    <p>Where creativity meets precision. Crafting visual experiences that inspire and captivate audiences worldwide.</p>
-                    <div class="social-icons">
-                        <a href="https://instagram.com" target="_blank" title="Instagram">📸</a>
-                        <a href="https://whatsapp.com" target="_blank" title="WhatsApp">💬</a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="{% url 'blog:index' %}">Home</a></li>
-                        <li><a href="{% url 'blog:about' %}">About Us</a></li>
-                        <li><a href="{% url 'blog:services' %}">Services</a></li>
-                        <li><a href="{% url 'blog:portfolio' %}">Portfolio</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li><a href="{% url 'blog:services' %}">Visual Effects</a></li>
-                        <li><a href="{% url 'blog:services' %}">CGI & Animation</a></li>
-                        <li><a href="{% url 'blog:services' %}">Video Production</a></li>
-                        <li><a href="{% url 'blog:services' %}">Sound Design</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li>📧 <a href="mailto:gowthamgo1745@gmail.com">gowthamgo1745@gmail.com</a></li>
-                        <li>📞 <a href="tel:+917539982355">+91 7539982355</a></li>
-                        <li>🌐 www.pixarprince.com</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Pixar Prince Animation Studio. All rights reserved. | Crafted with ❤️ by Gowtham A</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="{% static 'blog/js/main.js' %}"></script>
-</body>
-</html>
+{% endblock %}
