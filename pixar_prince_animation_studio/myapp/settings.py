@@ -27,7 +27,12 @@ SECRET_KEY = 'django-insecure-r8u8u5a_r97qnst#*j#q#qald#098kp1qir79&5%j6tpkp1kvb
 DEBUG = False
 
 # Configure for production
-ALLOWED_HOSTS = ['.onrender.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = [
+    'pixar-prince-animation-studio-3nsu.onrender.com',
+    '.onrender.com',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
